@@ -18,22 +18,24 @@
 
 
 //If i have two childs i can make an array of childs
-const parent=React.createElement("div",{id:'parent'},
-[
-React.createElement('div',{id:'child'},
-[
-React.createElement('h1',{},'Im a h1 tag'),
-React.createElement('h2',{},'I am h2')
-]),
-[
-    React.createElement('div',{id:'child2'},
+const parent = React.createElement("div", { id: 'parent' },
     [
-    React.createElement('h1',{},'Im a h1 tag'),
-    React.createElement('h2',{},'I am h2')
-    ])]]
+        React.createElement('div', { id: 'child' },
+            [
+                React.createElement('h1', {}, 'Im a h1 tag'),
+                React.createElement('h2', {}, 'I am h2')
+            ]),
+        
+        React.createElement('div', { id: 'child2' },
+            [
+                    React.createElement('h1', {}, 'Im a h1 tag'),
+                    React.createElement('h2', {}, 'I am h2')
+            ])
+        
+    ]
 );
 
-const root=ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(parent);
 
 
